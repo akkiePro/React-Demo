@@ -33,8 +33,14 @@ NavBar.propTypes = {
     home: PropTypes.string,
     about: PropTypes.string.isRequired
 }
+NavBar.defaultProps = {
+    title: "your title here",
+    about: "your about text here",
+    home: "your Home text here"
+}
 /**
  * PropTypes is used for type safety for props
  * PropTypes.string will give you warning in browser if you pass Number instead of string
  * isRequired will give you warning if you don't pass props
+ * defaultProps is used for default props. if you forget to pass props, defaultProps will take place.
  */
