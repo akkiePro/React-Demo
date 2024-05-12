@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export default function NavBar(props) {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -25,3 +27,14 @@ export default function NavBar(props) {
         </nav>
     );
 }
+
+NavBar.propTypes = {
+    title: PropTypes.string.isRequired,
+    home: PropTypes.string,
+    about: PropTypes.string.isRequired
+}
+/**
+ * PropTypes is used for type safety for props
+ * PropTypes.string will give you warning in browser if you pass Number instead of string
+ * isRequired will give you warning if you don't pass props
+ */

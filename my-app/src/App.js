@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       {/* <NavBar/> */}
-      <NavBar title="MyApp" home="Home" about="About Us" />
+      <NavBar title="MyApp" home="Home" />
     </>
   );
 }
