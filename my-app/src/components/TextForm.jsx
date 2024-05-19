@@ -8,15 +8,18 @@ export default function TextForm(props) {
     function handleUpClick() {
         // console.log("Handle Up Clicked")
         setText(text.toUpperCase())
+        props.showAlert('Converted to UpperCase', 'success')
     }
-
+    
     function handleLowClick() {
         // console.log("Handle Up Clicked")
         setText(text.toLowerCase())
+        props.showAlert('Converted to LowerCase', 'success')
     }
-
+    
     function handleClrClick() {
         setText('')
+        props.showAlert('Cleared data from textarea.', 'success')
     }
 
     function handleChange(event) {
