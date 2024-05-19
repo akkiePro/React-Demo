@@ -24,19 +24,28 @@ export default function TextForm(props) {
         setText(event.target.value)
     }
 
+    const darkStyle = {
+        backgroundColor : '#002b69',
+        color : 'white'
+    }
+    const lightStyle = {
+        backgroundColor : 'white',
+        color : 'black'
+    }
+
     return (
         <>
-            <div className='container'>
+            <div className={`container text-${props.mode==='light' ? 'dark' : 'light'}`}>
                 <div className="mb-3">
                     <h1>{props.heading}</h1>
-                    <textarea className="form-control my-3" id="myForm" value={text} onChange={handleChange} rows="8"></textarea>
+                    <textarea className="form-control my-3" style={props.mode==='light' ? lightStyle : darkStyle} id="myForm" value={text} onChange={handleChange} rows="8"></textarea>
                     <button type="button" className="btn btn-primary me-1" onClick={handleUpClick}>Convert to UpperCase</button>
                     <button type="button" className="btn btn-info mx-1" onClick={handleLowClick}>Convert to LowerCase</button>
                     <button type="button" className="btn btn-danger mx-1   " onClick={handleClrClick}>Clear</button>
                 </div>
             </div>
 
-            <div className="container">
+            <div className={`container text-${props.mode==='light' ? 'dark' : 'light'}`}>
                 <h2>Your text summary</h2>
                 <p>{(text.length !== 0) ? text.split(' ').length : 0} words, 
                     {text.length} characters, 
