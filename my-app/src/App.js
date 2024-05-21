@@ -25,6 +25,13 @@ function App() {
       document.body.style.backgroundColor = '#002b69'
       showAlert('Dark mode enabled.', 'success')
       document.title = 'TextUtils - Dark Mode'
+      // not a good behaviour
+      // setInterval(() => {
+      //   document.title = 'Install TextUtils now'
+      // }, 2000);
+      // setInterval(() => {
+      //   document.title = 'Virus'
+      // }, 1500);
     } else {
       setMode('light')
       document.body.style.backgroundColor = 'white'
