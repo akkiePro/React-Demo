@@ -24,10 +24,12 @@ function App() {
       setMode('dark')
       document.body.style.backgroundColor = '#002b69'
       showAlert('Dark mode enabled.', 'success')
+      document.title = 'TextUtils - Dark Mode'
     } else {
       setMode('light')
       document.body.style.backgroundColor = 'white'
       showAlert('Dark mode disabled.', 'success')
+      document.title = 'TextUtils - Light Mode'
     }
   }
   return (
